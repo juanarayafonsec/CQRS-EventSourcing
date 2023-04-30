@@ -1,4 +1,6 @@
-﻿namespace CQRS.Core.Events;
+﻿using CQRS.Core.Events;
+
+namespace Post.Common.Events;
 public class PostCreatedEvent : BaseEvent
 {
     public PostCreatedEvent() : base(nameof(PostCreatedEvent)) { }

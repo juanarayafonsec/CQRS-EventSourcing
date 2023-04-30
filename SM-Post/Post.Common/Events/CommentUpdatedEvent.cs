@@ -1,4 +1,6 @@
-﻿namespace CQRS.Core.Events;
+﻿using CQRS.Core.Events;
+
+namespace Post.Common.Events;
 public class CommentUpdatedEvent : BaseEvent
 {
     public CommentUpdatedEvent() : base(nameof(CommentUpdatedEvent))
