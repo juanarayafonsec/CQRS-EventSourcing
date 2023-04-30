@@ -9,7 +9,7 @@ public class CommandDispatcher : ICommandDispatcher
     {
         if (_handlers.ContainsKey(typeof(T)))
         {
-            throw new IndexOutOfRangeException("You cannot register the same comand handler twice!");
+            throw new IndexOutOfRangeException("You cannot register the same command handler twice!");
         }
 
         _handlers.Add(typeof(T), x => handler((T)x));
