@@ -5,7 +5,7 @@ namespace Post.Cmd.Infrastructure.Dispatchers;
 public class CommandDispatcher : ICommandDispatcher
 {
     private readonly Dictionary<Type, Func<BaseCommand, Task>> _handlers = new();
-    public void RegisterHandlder<T>(Func<T, Task> handler) where T : BaseCommand
+    public void RegisterHandler<T>(Func<T, Task> handler) where T : BaseCommand
     {
         if (_handlers.ContainsKey(typeof(T)))
         {

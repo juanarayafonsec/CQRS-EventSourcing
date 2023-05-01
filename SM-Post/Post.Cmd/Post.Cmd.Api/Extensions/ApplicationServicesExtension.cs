@@ -34,13 +34,13 @@ public static class ApplicationServicesExtension
         var commandHandler = services.BuildServiceProvider().GetRequiredService<ICommandHandler>();
         
         var dispatcher = new CommandDispatcher();
-        dispatcher.RegisterHandlder<NewPostCommand>(commandHandler.HandleAsync);
-        dispatcher.RegisterHandlder<EditMessageCommand>(commandHandler.HandleAsync);
-        dispatcher.RegisterHandlder<LikePostCommand>(commandHandler.HandleAsync);
-        dispatcher.RegisterHandlder<AddCommentCommands>(commandHandler.HandleAsync);
-        dispatcher.RegisterHandlder<EditCommentCommand>(commandHandler.HandleAsync);
-        dispatcher.RegisterHandlder<RemoveCommentCommand>(commandHandler.HandleAsync);
-        dispatcher.RegisterHandlder<DeletePostCommand>(commandHandler.HandleAsync);
+        dispatcher.RegisterHandler<NewPostCommand>(commandHandler.HandleAsync);
+        dispatcher.RegisterHandler<EditMessageCommand>(commandHandler.HandleAsync);
+        dispatcher.RegisterHandler<LikePostCommand>(commandHandler.HandleAsync);
+        dispatcher.RegisterHandler<AddCommentCommands>(commandHandler.HandleAsync);
+        dispatcher.RegisterHandler<EditCommentCommand>(commandHandler.HandleAsync);
+        dispatcher.RegisterHandler<RemoveCommentCommand>(commandHandler.HandleAsync);
+        dispatcher.RegisterHandler<DeletePostCommand>(commandHandler.HandleAsync);
         
         services.AddSingleton<ICommandDispatcher>(_ => dispatcher);
     }

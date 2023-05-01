@@ -12,12 +12,10 @@
     "Post.Query.Api": {
       "commandName": "Project",
       "dotnetRunMessages": true,
-      "launchBrowser": true,
-      "launchUrl": "swagger",
-      "applicationUrl": "https://localhost:7231;http://localhost:5042",
+      "launchBrowser": false,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "ASPNETCORE_URLS": "http://locahost:5010",
+        "ASPNETCORE_URLS": "http://locahost:5011",
         "KAFKA_TOPIC": "SocialMediaPostEvents"
       }
     }
